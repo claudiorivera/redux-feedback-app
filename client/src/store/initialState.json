@@ -1,0 +1,19 @@
+{
+  "completedFeedback": {
+    "rows": [],
+    "showingRowsWithFilter": "SHOW_ALL",
+    "isFetching": false,
+    "errors": []
+  },
+  "currentFeedback": {
+    "feedback": {
+      "feeling": null,
+      "understanding": null,
+      "support": null,
+      "comments": null
+    },
+    "isPosting": false,
+    "errors": [],
+    "didPostSuccessfully": false
+  }
+}

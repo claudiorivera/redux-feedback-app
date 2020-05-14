@@ -1,0 +1,26 @@
+{
+  "name": "feedback-app-server",
+  "version": "1.0.0",
+  "description": "A survey app built with the PERN stack, which was made for a homework assignment.",
+  "main": "server.js",
+  "repository": "https://github.com/claudiorivera/redux-feedback-app",
+  "author": "Claudio Rivera <me@claudiorivera.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node server",
+    "client": "yarn --cwd client start",
+    "server": "nodemon server",
+    "dev": "concurrently --names 'SERVER,CLIENT' -c 'bgBlue.bold,bgMagenta.bold' 'yarn run server' 'yarn run client'"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
+    "pg-promise": "^10.5.5"
+  }
+}
