@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const favicon = require("express-favicon");
+// const favicon = require("express-favicon");
 const path = require("path");
 const pgp = require("pg-promise")();
 
@@ -14,8 +14,8 @@ const db = pgp(DB_URI);
 
 // Middleware
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "client", "public")));
-app.use(favicon(path.join(__dirname, "client", "public", "favicon.ico")));
+app.use(express.static(path.join(__dirname, "client", "build")));
+// app.use(favicon(path.join(__dirname, "client", "build", "favicon.ico")));
 
 // Routes
 // GET /feedback - Get all feedback
@@ -59,6 +59,11 @@ app.put("/feedback/:id", (req, res) => {
       res.status(200).json({ success: true });
     })
     .catch((error) => res.status(400).json({ error }));
+});
+
+// https://coursework.vschool.io/deploying-mern-with-heroku/
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 // Start server
