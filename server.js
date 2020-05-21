@@ -1,6 +1,5 @@
 require("dotenv").config();
 const express = require("express");
-// const favicon = require("express-favicon");
 const path = require("path");
 const pgp = require("pg-promise")();
 
@@ -15,7 +14,6 @@ const db = pgp(DB_URI);
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "client", "build")));
-// app.use(favicon(path.join(__dirname, "client", "build", "favicon.ico")));
 
 // Routes
 // GET /feedback - Get all feedback
