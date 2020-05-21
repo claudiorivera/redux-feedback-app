@@ -11,8 +11,8 @@
     "start": "node server",
     "client": "yarn --cwd client start",
     "server": "nodemon server",
-    "dev": "concurrently --names 'SERVER,CLIENT' -c 'bgBlue.bold,bgMagenta.bold' 'yarn run server' 'yarn run client'",
-    "heroku-postbuild": "cd client && yarn && yarn run build"
+    "build": "yarn --cwd client install && yarn --cwd client build",
+    "dev": "concurrently --names 'SERVER,CLIENT' -c 'bgBlue.bold,bgMagenta.bold' 'yarn run server' 'yarn run client'"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
