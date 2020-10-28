@@ -1,21 +1,23 @@
-import React, { Component } from "react";
-// https://stackoverflow.com/questions/42892488/react-router-v4-0-0-uncaught-typeerror-cannot-read-property-location-of-unde
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-import { connect } from "react-redux";
-import { clearCurrentFeedback } from "../store/actions";
 import {
+  AppBar,
+  Box,
   Button,
   Container,
-  AppBar,
+  Grid,
   Toolbar,
   Typography,
-  Grid,
-  Box,
 } from "@material-ui/core";
 import { KeyboardArrowRight } from "@material-ui/icons";
-
-// Router routes
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import {
+  BrowserRouter as Router,
+  Link,
+  NavLink,
+  Route,
+} from "react-router-dom";
 import { routes } from "../routes";
+import { clearCurrentFeedback } from "../store/actions";
 
 class App extends Component {
   handleBeginClick = () => {
@@ -27,14 +29,22 @@ class App extends Component {
         <Router>
           <AppBar position="static">
             <Toolbar>
-              <Typography variant="h6">Feedback App</Typography>
-              {/* <Button color="inherit">Admin</Button> */}
-              <NavLink to="/">
-                <Button>Home</Button>
-              </NavLink>
-              <NavLink to="/admin">
-                <Button>Admin</Button>
-              </NavLink>
+              <Typography variant="h6" style={{ marginRight: "1rem" }}>
+                Feedback App
+              </Typography>
+              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+                <Button variant="text" color="inherit">
+                  Home
+                </Button>
+              </Link>
+              <Link
+                to="/admin"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <Button variant="text" color="inherit">
+                  Admin
+                </Button>
+              </Link>
             </Toolbar>
           </AppBar>
           {/* Home page route */}
