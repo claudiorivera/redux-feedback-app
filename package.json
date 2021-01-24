@@ -28,6 +28,7 @@
     "node": "15.x"
   },
   "resolutions": {
-    "immer": "^8.0.1"
+    "immer": "^8.0.1",
+    "node-notifier": "^8.0.1"
   }
 }
