@@ -12,4 +12,4 @@ Add a `.env` file with a `DB_URI` value that points to a Postgres database.
 
 # Dev
 
-`yarn run dev`
+`yarn dev`
