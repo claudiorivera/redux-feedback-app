@@ -29,6 +29,6 @@
   },
   "resolutions": {
     "immer": "^9.0.0",
-    "node-notifier": "^8.0.1"
+    "node-notifier": "^10.0.0"
   }
 }
