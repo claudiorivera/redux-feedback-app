@@ -16,7 +16,7 @@
     "dev": "concurrently --names 'SERVER,CLIENT' -c 'bgBlue.bold,bgMagenta.bold' 'yarn server' 'yarn client'"
   },
   "devDependencies": {
-    "concurrently": "6.2.1",
+    "concurrently": "6.2.2",
     "nodemon": "2.0.13"
   },
   "dependencies": {
