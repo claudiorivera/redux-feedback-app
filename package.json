@@ -25,7 +25,7 @@
     "pg-promise": "10.11.1"
   },
   "engines": {
-    "node": "14.x"
+    "node": "16.x"
   },
   "resolutions": {
     "immer": "^9.0.0",
